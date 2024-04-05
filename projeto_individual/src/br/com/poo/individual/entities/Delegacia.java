@@ -1,23 +1,23 @@
 package br.com.poo.individual.entities;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Delegacia {
 		
 		private int id;
 		private String nome;
-		private LocalDate horarioAbertura;
-		private LocalDate horarioFechamento;
+		private LocalTime horarioAbertura;
+		private LocalTime horarioFechamento;
 		private String fkEnd;
 	
-	//construtor default
 	
 	public Delegacia() {
 		super();
 
 	}
-
-	public Delegacia(int id, String nome, LocalDate horarioAbertura, LocalDate horarioFechamento, String fkEnd) {
+	
+	
+	public Delegacia(int id, String nome, LocalTime horarioAbertura, LocalTime horarioFechamento, String fkEnd) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -42,19 +42,19 @@ public class Delegacia {
 		this.nome = nome;
 	}
 
-	public LocalDate getHorarioAbertura() {
+	public LocalTime getHorarioAbertura() {
 		return horarioAbertura;
 	}
 
-	public void setHorarioAbertura(LocalDate horarioAbertura) {
+	public void setHorarioAbertura(LocalTime horarioAbertura) {
 		this.horarioAbertura = horarioAbertura;
 	}
 
-	public LocalDate getHorarioFechamento() {
+	public LocalTime getHorarioFechamento() {
 		return horarioFechamento;
 	}
 
-	public void setHorarioFechamento(LocalDate horarioFechamento) {
+	public void setHorarioFechamento(LocalTime horarioFechamento) {
 		this.horarioFechamento = horarioFechamento;
 	}
 
