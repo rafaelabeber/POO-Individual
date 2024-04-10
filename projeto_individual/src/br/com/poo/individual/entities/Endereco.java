@@ -51,5 +51,9 @@ public class Endereco {
 	public void setNumero(int numero) {
 		Numero = numero;
 	}
+	@Override
+	public String toString() {
+		return "\nEndereco:\nid=" + id + "\nCEP=" + CEP + "\nBairro=" + Bairro + "\nNumero=" + Numero;
 }	
+}
 	

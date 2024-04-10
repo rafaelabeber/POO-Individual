@@ -65,4 +65,9 @@ public class Delegacia {
 	public void setFkEnd(String fkEnd) {
 		this.fkEnd = fkEnd;
 	}
+	
+	@Override
+	public String toString() {
+		return "\nDelegacia:\nid=" + id + "\nnome=" + nome + "\nhorarioAbertura=" + horarioAbertura + "\nhorarioFechamento=" + horarioFechamento + "\nEndereço=" + fkEnd;
+	}
 }
