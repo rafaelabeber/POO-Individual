@@ -1,0 +1,10 @@
+Endereco;1;25006789;Cascatinha;264;
+Endereco;2;25007890;Mosela;512;
+Endereco;3;25008901;Bingen;32;
+Endereco;4;25009123;Castelânea;12;
+Endereco;5;25010234;Pedro do Rio;34;
+Delegacia;1;Policia Civil;09:00:00;18:00:00;1;
+Delegacia;2;Cyber Crimes;05:00:00;23:00:00;2;
+Delegacia;3;Del. Feminina;05:00:00;00:00:00;3;
+Delegacia;4;Del. Tráfico;00:00:00;00:00:00;4;
+Delegacia;5;Del. Pericia;10:00:00;20:00:00;5;
