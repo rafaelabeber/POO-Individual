@@ -1,6 +1,8 @@
 package br.com.poo.individual.entities;
 
 import java.time.LocalTime;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Delegacia {
 		
@@ -8,16 +10,17 @@ public class Delegacia {
 		private String nome;
 		private LocalTime horarioAbertura;
 		private LocalTime horarioFechamento;
-		private String fkEnd;
+		private int fkEnd;
 	
-	
+	static Map<Integer, Delegacia> mapaDelegacia = new HashMap<>();
+		
 	public Delegacia() {
 		super();
 
 	}
 	
 	
-	public Delegacia(int id, String nome, LocalTime horarioAbertura, LocalTime horarioFechamento, String fkEnd) {
+	public Delegacia(int id, String nome, LocalTime horarioAbertura, LocalTime horarioFechamento, int fkEnd) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -58,12 +61,16 @@ public class Delegacia {
 		this.horarioFechamento = horarioFechamento;
 	}
 
-	public String getFkEnd() {
+	public int getFkEnd() {
 		return fkEnd;
 	}
 
-	public void setFkEnd(String fkEnd) {
+	public void setFkEnd(int fkEnd) {
 		this.fkEnd = fkEnd;
+	}
+	
+	public static Map<Integer, Delegacia> getMapaDelegacia() {
+		return mapaDelegacia;
 	}
 	
 	@Override

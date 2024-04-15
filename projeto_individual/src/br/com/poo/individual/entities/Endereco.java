@@ -1,23 +1,28 @@
 package br.com.poo.individual.entities;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Endereco {
 	
 	private int id;
-	private int CEP;
-	private String Bairro;
-	private int Numero;
+	private int cep;
+	private String bairro;
+	private int numero;
 		
-		
+	
+	static Map<Integer, Endereco> mapaEndereco = new HashMap<>(); 
+	
 	public Endereco() {
 		super();
 		}
 
-	public Endereco(int id, int cEP, String bairro, int numero) {
+	public Endereco(int id, int cep, String bairro, int numero) {
 		super();
 		this.id = id;
-		CEP = cEP;
-		Bairro = bairro;
-		Numero = numero;
+		this.cep = cep;
+		this.bairro = bairro;
+		this.numero = numero;
 	}
 
 	public int getId() {
@@ -29,31 +34,35 @@ public class Endereco {
 	}
 
 	public int getCEP() {
-		return CEP;
+		return cep;
 	}
 
-	public void setCEP(int cEP) {
-		CEP = cEP;
+	public void setCEP(int cep) {
+		this.cep = cep;
 	}
 
 	public String getBairro() {
-		return Bairro;
+		return bairro;
 	}
 
 	public void setBairro(String bairro) {
-		Bairro = bairro;
+		this.bairro = bairro;
 	}
 
 	public int getNumero() {
-		return Numero;
+		return numero;
 	}
 
 	public void setNumero(int numero) {
-		Numero = numero;
+		this.numero = numero;
+	}
+	
+	public static Map<Integer, Endereco> getMapaEndereco() {
+		return mapaEndereco;
 	}
 	@Override
 	public String toString() {
-		return "\nEndereco:\nid=" + id + "\nCEP=" + CEP + "\nBairro=" + Bairro + "\nNumero=" + Numero;
+		return "\nEndereco:\nid=" + id + "\nCEP=" + cep + "\nBairro=" + bairro + "\nNumero=" + numero;
 }	
 }
 	
