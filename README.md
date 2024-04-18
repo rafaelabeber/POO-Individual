@@ -15,8 +15,8 @@ Trabalho Individual Final - SERRATEC
 <ul>
     <li>Sobre o Projeto</li>
     <li>Tecnologias utilizadas</li>
-    <li>Diagrama</li>
-    <li>Autores do Projeto</li>
+    <li>Modelo Lógico</li>
+    <li>Autor do Projeto</li>
 </ul>
 
 ## :desktop_computer:Sobre o Projeto
