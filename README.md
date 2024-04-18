@@ -1,9 +1,9 @@
 <h1 align="center">
     
-Projeto final - POO - Programação orientada a objetos 
+Trabalho Individual Final - SERRATEC
 
 
-<img src="capaRead.png">
+<img src="capa.png">
 </h1>
 </div>
 </br>
