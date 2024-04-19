@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 
 import br.com.poo.individual.util.Util;
 
-
 public class MenuService {
 
 	static Logger logger = Util.setupLogger();
@@ -53,4 +52,3 @@ public class MenuService {
 		}
 	}
 }
-
