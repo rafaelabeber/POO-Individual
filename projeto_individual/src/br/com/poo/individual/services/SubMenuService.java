@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import br.com.poo.individual.controllers.DelController;
 import br.com.poo.individual.controllers.EndController;
 import br.com.poo.individual.util.Util;
@@ -13,7 +14,7 @@ public class SubMenuService {
 	static Logger logger = Util.setupLogger();
 	static Scanner sc = new Scanner(System.in);
 
-	public static void SubMenuImpresso() throws IOException {
+	public static void subMenuImpresso() throws IOException {
 		DelController delController = new DelController();
 		EndController endController = new EndController();
 
@@ -32,24 +33,24 @@ public class SubMenuService {
 		switch (opcao) {
 		case 1:
 			Util.customizer();
-			logger.log(Level.INFO, "Lista das Delegacias: \n");
+			logger.log(Level.INFO, "Listando Delegacias... \n");
 			delController.listaDelegacias();
 			logger.log(Level.INFO, "\n");
-			SubMenuImpresso();
+			subMenuImpresso();
 			break;
 		case 2:
 			Util.customizer();
-			logger.log(Level.INFO, "Lista dos Bairros que possuem Delegacias: \n");
+			logger.log(Level.INFO, "Listando dos Bairros que possuem Delegacias... \n");
 			endController.listaBairros();
 			logger.log(Level.INFO, "\n");
-			SubMenuImpresso();
+			subMenuImpresso();
 			break;
 		case 3:
 			Util.customizer();
-			logger.log(Level.INFO, "Lista de Delegacias e seus Endereços: \n");
+			logger.log(Level.INFO, "Listando Delegacias e seus Endereços... \n");
 			delController.listaDelegaciaEndereco();
 			logger.log(Level.INFO, "\n");
-			SubMenuImpresso();
+			subMenuImpresso();
 			break;
 
 		case 0:
@@ -59,19 +60,21 @@ public class SubMenuService {
 		default:
 			Util.customizer();
 			logger.log(Level.INFO, "Opção inválida!");
-			SubMenuImpresso();
+			subMenuImpresso();
 			break;
 		}
 
 	}
 
-	public static void subMenuConsole() throws IOException {
+	public static void subMenuConsole() throws IOException, InterruptedException {
 		DelController delController = new DelController();
-		
+		EndController endController = new EndController();
+
 		Util.customizer();
 		logger.log(Level.INFO, """
 				Menu interativo:
-				[1]\tCadastrar Delegacia
+				[1]\tMostrar Relatório da Delagacia na Tela.
+				[2]\tMostrar Relatório de Endereços na Tela.
 				[0]\tSair
 				Digite uma opção:
 				""");
@@ -82,18 +85,25 @@ public class SubMenuService {
 		case 1:
 			Util.customizer();
 			logger.log(Level.INFO, "Lista as Delegacias existentes");
-			delController.listaDelegacias();
+			delController.listaNomesDelegacias();
+			logger.log(Level.INFO, "\n\n");
+			subMenuConsole();
+			break;
+		case 2:
+			Util.customizer();
+			logger.log(Level.INFO, "Lista dos Endereços existentes");
+			endController.listaBairrosTela();
 			logger.log(Level.INFO, "\n\n");
 			subMenuConsole();
 			break;
 		case 0:
+			MenuService.menu();
 		default:
 			Util.customizer();
 			logger.log(Level.INFO, "Opção inválida!");
-			SubMenuImpresso();
+			subMenuImpresso();
 			break;
 		}
 
 	}
 }
-
